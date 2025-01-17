@@ -175,11 +175,13 @@ class CastStatusListener(
 
     def new_cast_status(self, status):
         """Handle reception of a new CastStatus."""
+        print("new_cast_status", status)
         if self._valid:
             self._cast_device.new_cast_status(status)
 
     def new_media_status(self, status):
         """Handle reception of a new MediaStatus."""
+        print("new_media_status", status)
         if self._valid:
             self._cast_device.new_media_status(status)
 
@@ -190,6 +192,7 @@ class CastStatusListener(
 
     def new_connection_status(self, status):
         """Handle reception of a new ConnectionStatus."""
+        print("new_connection_status", status)
         if self._valid:
             self._cast_device.new_connection_status(status)
 
