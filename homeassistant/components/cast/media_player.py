@@ -520,6 +520,7 @@ class CastMediaPlayerEntity(CastDevice, MediaPlayerEntity):
     def turn_on(self) -> None:
         """Turn on the cast device."""
 
+        print('turning on')
         chromecast = self._get_chromecast()
         if not chromecast.is_idle:
             # Already turned on
@@ -539,6 +540,7 @@ class CastMediaPlayerEntity(CastDevice, MediaPlayerEntity):
     @api_error
     def turn_off(self) -> None:
         """Turn off the cast device."""
+        print('turning off')
         self._get_chromecast().quit_app()
 
     @api_error
